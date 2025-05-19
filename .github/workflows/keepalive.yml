@@ -1,6 +1,9 @@
 name: Keep Flask Server Awake
 
 on:
+  push:             # ✅ 최초 한 번만 강제로 실행시킬 목적
+    branches:
+      - main
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
@@ -13,3 +16,5 @@ jobs:
         run: curl -s https://flask-api-server-wbnf.onrender.com/ping
       - name: init trigger
         run: echo "first commit"
+
+  
