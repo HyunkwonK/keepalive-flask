@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Flask server
-        run: curl -s https://flask-api-server-wbnf.onrender.com/ping
+        run: curl -s https://blog-auto-cbd1.onrender.com/ping
       - name: init trigger
         run: echo "first commit"
 
